@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="description" content="Simple app for calculating 15% tip." />
+    <link rel="stylesheet" href="styles.css">
+    <title>
+        Minimum Tip
+    </title>
+</head>
+
+<body>
+    <script>
+        function calculateTip(billAmount) {
+            document.getElementById('tipAmount').innerHTML = '________';
+            console.log('Calculating Tip.....');
+            billAmount = billAmount.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+            if (!billAmount) {
+                document.getElementById('billAmountField').value = ''
+                return;
+            }
+            const tip = (billAmount * 0.15).toFixed(2);
+            document.getElementById('tipAmount').innerHTML = tip;
+        }
+    </script>
+
+    <div class="container">
+        <div class="header">
+            How much should I tip?
+        </div>
+        <div class="description">
+            <p>
+                By default, Minimum tip is set to 15%.
+            </p>
+            <p>
+                Want to be more generous? Please use your calculator &#128512;
+            </p>
+        </div>
+        <input class="billAmountField" type="text" placeholder="Total Bill" name="billAmount" id="billAmountField"
+            oninput="calculateTip(this.value)" />
+        <div class="tipAmountCtn">
+            <span class="tipLabel">
+                MINIMUM TIP:
+            </span>
+            <span class="tipAmount" id="tipAmount">________</span>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

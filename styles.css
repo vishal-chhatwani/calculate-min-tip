@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 3rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: monospace;
+    border: 9px solid #5757bd;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+.billAmountField {
+    width: 40%;
+    margin: 3rem auto;
+    height: 4rem;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+.tipAmountCtn {
+    margin: 2rem auto;
+    width:40%;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.tipLabel {
+    flex: 1;
+    font-weight: bold;
+}
+
+.tipAmount {
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
